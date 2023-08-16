@@ -1,13 +1,121 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: rgba(221, 221, 221, 0.39);
+    padding: 0 0 0 0;
+    position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+    height: 100%;
+}
+
+.picked {
+    float: right;
+    width: 25%;
+    height: 100%;
+    padding-top: 20px;
+    /* background-color: rgba(221, 221, 221, 100); */
+
+}
+
+.search {
+    float: left;
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    height: 100%;
+    /* background-color:rgba(221, 221, 221, 0.39); */
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputt {
+    float: left;
+    --width-of-input: 200px;
+    --border-height: 1px;
+    --border-before-color: rgba(221, 221, 221, 100);
+    /* --border-after-color: #5891ff; */
+    --border-after-color: #4985e01f;
+    --input-hovered-color: #4985e01f;
+    position: relative;
+    width: var(--width-of-input);
+}
+
+.input {
+    color: #fff;
+    font-size: 0.9rem;
+    color: black;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+    border-bottom: var(--border-height) solid var(--border-before-color);
+}
+
+.input-border {
+    position: absolute;
+    background: var(--border-after-color);
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+/* Hover on Input */
+input:hover {
+    background: var(--input-hovered-color);
+}
+
+input:focus {
+    outline: none;
+}
+
+/* here is code of animated border */
+input:focus~.input-border {
+    width: 100%;
+}
+
+/* === if you want to do animated border on typing === */
+/* remove input:focus code and uncomment below code */
+/* input:valid ~ .input-border{
+     width: 100%;
+   } */
+
+
+
+.display {
+    float: left;
+    clear: left;
+    padding-top: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:visited{
+    text-decoration: none;
+    color: black;
+  }
+
+
+.books{
+    
+}
+
+.bookContent{
+
+}
+
+.titleContent{
+
+}
+
+.searchDiv{
+    margin-top: 8px;
 }
