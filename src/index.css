@@ -85,7 +85,14 @@ input:focus~.input-border {
      width: 100%;
    } */
 
+.booklist{
+    margin:5px
+    
+}
 
+.booklist:hover{
+    color: blue;
+}
 
 .display {
     float: left;
@@ -96,26 +103,53 @@ input:focus~.input-border {
 nav a{
     text-decoration: none;
     color: black;
+    font-size: 130%;
+    text-align: center;
 }
 
 nav a:visited{
     text-decoration: none;
     color: black;
+    font-size: 130%;
+    text-align: center;
   }
+
+nav a:hover{
+    color:cornflowerblue;
+}
 
 
 .books{
-    
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .bookContent{
-
+    float: left;
+    display: flex;
+    justify-content: center;
+    width: 65%;
+    height: 100%;
+    /* background-color:rgba(221, 221, 221, 0.39); */
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
 }
 
-.titleContent{
-
+.descContent{
+    float: right;
+    width: 35%;
+    height: 100%;
+    padding-top: 20px;
 }
 
 .searchDiv{
     margin-top: 8px;
+}
+
+img{
+    height:300px;
+    width: 200px;
+    margin:30px
 }

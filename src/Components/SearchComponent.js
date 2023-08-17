@@ -117,7 +117,7 @@ function SearchComponent({ pregledano, setPregledano }) {
                     <span className="input-border"></span>
             </div>
             <div className='searchDiv'>
-                <button onClick={() => handleChange()}>SUBMIT</button>
+                <button onClick={() => handleChange()}>PRETRAZI</button>
             </div>
             <div className='display'>
                 <nav>
@@ -135,8 +135,7 @@ function SearchComponent({ pregledano, setPregledano }) {
                     Prethodno izabrane knjige :
                     <nav>
                         <ul>
-                            {(pregledano.length) ? pregledano.map
-                                (book => (<li key={'likey' + book.key}><Link to={`${book.key}`} >{book.title}</Link></li>)) : <h1>Nema pregledanih</h1>}
+                            {(pregledano.length) ? pregledano.map (book => (<li key={'likey' + book.key}><Link to={`${book.key}`} >{book.title}</Link></li>)) : <h1>Nema pregledanih</h1>}
                         </ul>
                     </nav>
                 </div>
