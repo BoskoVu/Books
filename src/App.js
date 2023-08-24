@@ -1,26 +1,32 @@
 import './App.css';
 import BookComponent from './Components/BookComponent';
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import PageNotFound from './Components/PageNotFound';
 import SearchComponent from './Components/SearchComponent';
 import { useState } from 'react';
+import Header from './Components/Header';
 
 function App() {
-  const [pregledano, setPregledano] = useState([]);
+  const [checked, setChecked] = useState([]);
 
-  
+
 
   return (
     <>
-      
+
       <div>
+        <div className='header'>
+          BookLibrary.com
+        </div>
         <Routes>
-          <Route path='/' element={<SearchComponent pregledano={pregledano} setPregledano={setPregledano} />}>
-            {/* <Route path=':bookId' element={<BookComponent />} /> */}
+          <Route path='/' element={<SearchComponent checked={checked} setChecked={setChecked} />}>
           </Route>
-            <Route path='/works/:bookId' element={<BookComponent pregledano={pregledano} setPregledano={setPregledano} />} />
+          <Route path='/works/:bookId' element={<BookComponent checked={checked} setChecked={setChecked} />} />
           <Route path='*' element={<PageNotFound />} />
         </Routes>
+        {/* <div className='footer'>
+        </div> */}
+        {/* <Header /> */}
       </div>
     </>
   );

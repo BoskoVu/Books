@@ -1,58 +1,101 @@
-body {
-    background-color: rgba(221, 221, 221, 0.39);
-    padding: 0 0 0 0;
-    position: relative;
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-html,
-body {
-    height: 100%;
+h3 {
+    margin-top: 15px;
 }
+
+body {
+    background-color: #FAF1E4;
+    opacity: 1;
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 0px;
+    position: relative;
+    margin: 0px;
+    display: block;
+    min-height: 100vh;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+
+.header {
+    height: 40px;
+    background-color: #435334;
+    align-items: center;
+    text-align: center;
+    color: #FAF1E4;
+    padding-top: 15px;
+    margin-bottom: 0px;
+    font-size: 25px;
+}
+
+
 
 .picked {
     float: right;
-    width: 25%;
+    width: 34%;
     height: 100%;
     padding-top: 20px;
-    /* background-color: rgba(221, 221, 221, 100); */
-
 }
 
 .search {
     float: left;
     display: flex;
-    justify-content: center;
-    width: 75%;
-    height: 100%;
-    /* background-color:rgba(221, 221, 221, 0.39); */
+    width: 60%;
+    min-height: 600px;
     padding-top: 20px;
+    border-right: 3px solid #9EB384;
     flex-direction: column;
-    align-items: center;
+    top: 100%;
+    padding-bottom: 100px;
+}
+
+.inputAndSearch {
+    height: 35px;
+    width: 100%;
+    background-color: #9EB384;
+    padding-top: 10px;
+    padding-left: 80px;
+}
+
+.searchDiv {
+    float: left;
+    width: 100px;
+    padding-bottom: 5px;
 }
 
 .inputt {
     float: left;
     --width-of-input: 200px;
-    --border-height: 1px;
-    --border-before-color: rgba(221, 221, 221, 100);
-    /* --border-after-color: #5891ff; */
-    --border-after-color: #4985e01f;
-    --input-hovered-color: #4985e01f;
+    --border-height: 2px;
+    --border-before-color: #FAF1E4;
+    --border-after-color: #435334;
+    /* --input-hovered-color: #00000065; */
     position: relative;
     width: var(--width-of-input);
+    padding-left: 0px;
+    margin-right: 30px;
 }
 
 .input {
-    color: #fff;
     font-size: 0.9rem;
-    color: black;
+    color: #FAF1E4;
     background-color: transparent;
     width: 100%;
     box-sizing: border-box;
     padding-inline: 0.5em;
     padding-block: 0.7em;
+    padding-bottom: 3px;
+    margin-top: 4px;
     border: none;
     border-bottom: var(--border-height) solid var(--border-before-color);
+    padding-top: 0;
 }
 
 .input-border {
@@ -65,7 +108,6 @@ body {
     transition: 0.3s;
 }
 
-/* Hover on Input */
 input:hover {
     background: var(--input-hovered-color);
 }
@@ -74,82 +116,162 @@ input:focus {
     outline: none;
 }
 
-/* here is code of animated border */
 input:focus~.input-border {
     width: 100%;
 }
 
-/* === if you want to do animated border on typing === */
-/* remove input:focus code and uncomment below code */
-/* input:valid ~ .input-border{
-     width: 100%;
-   } */
 
-.booklist{
-    margin:5px
-    
+.searchResult {
+    padding-left: 80px;
+
+    text-align: left;
 }
 
-.booklist:hover{
-    color: blue;
+.searchResult:hover {
+    background-color: #CEDEBD;
+    color: #435334;
+}
+
+.btn {
+    background-color: #435334;
+    border: none;
+    color: white;
+    padding: 0px 7px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 40px;
+}
+
+.btn:hover {
+    background-color: #9EB384;
+}
+
+.btnHome {
+    background-color: #435334;
+    border: none;
+    color: white;
+    padding: 0px 7px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 30px;
+    margin-top: 0;
+}
+
+.btnHome:hover {
+    background-color: #9EB384;
 }
 
 .display {
     float: left;
     clear: left;
-    padding-top: 30px;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     color: black;
     font-size: 130%;
     text-align: center;
 }
 
-nav a:visited{
+nav a:visited {
     text-decoration: none;
-    color: black;
+    color: #435334;
     font-size: 130%;
     text-align: center;
-  }
-
-nav a:hover{
-    color:cornflowerblue;
 }
 
+nav a:hover {
 
-.books{
+    color: #9EB384;
+}
+
+.buttonDiv {
+    padding-left: 130px;
+    width: 80px;
+    margin-bottom: 30px;
+
+}
+
+.button {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.button:hover {
+    background-color: #b7b6b6;
+}
+
+.books {
     padding-top: 20px;
     flex-direction: column;
     align-items: center;
 }
 
-.bookContent{
+.bookContent {
     float: left;
     display: flex;
     justify-content: center;
-    width: 65%;
+    width: 40%;
     height: 100%;
-    /* background-color:rgba(221, 221, 221, 0.39); */
-    padding-top: 20px;
+    padding-top: 30px;
     flex-direction: column;
     align-items: center;
+    margin-left: 50px;
+
 }
 
-.descContent{
-    float: right;
-    width: 35%;
-    height: 100%;
-    padding-top: 20px;
+.bookTitle {
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    padding-top: 8px;
+    border-top: 1px solid #9EB384;
 }
 
-.searchDiv{
-    margin-top: 8px;
+.bookAuthor {
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-top: 1px solid #9EB384;
+    border-bottom: 1px solid #9EB384;
 }
 
-img{
-    height:300px;
-    width: 200px;
-    margin:30px
+.bookDesc {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.imgDiv {
+    float: left;
+    align-items: center;
+    align-content: center;
+    width: 30%;
+    padding-left: 100px;
+    border-right: 1px solid #9EB384;
+    padding-top: 0px;
+}
+
+
+
+img {
+    height: 500px;
+    width: 300px;
+    margin: 30px;
+    padding-top: 0;
 }
