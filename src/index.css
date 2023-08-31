@@ -123,13 +123,17 @@ input:focus~.input-border {
 
 .searchResult {
     padding-left: 80px;
-
     text-align: left;
 }
 
 .searchResult:hover {
     background-color: #CEDEBD;
     color: #435334;
+}
+
+.loading {
+    padding-left: 80px;
+    text-align: left;
 }
 
 .btn {
@@ -204,6 +208,16 @@ nav a:hover {
     cursor: pointer;
 }
 
+.buttonn {
+    background-color: #b4b4b4;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+}
+
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -274,4 +288,38 @@ img {
     width: 300px;
     margin: 30px;
     padding-top: 0;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+  }
+
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 36px;
+    height: 36px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #9EB384;
+    border-color: #9EB384 transparent #9EB384 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  
+@keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+.pageNotFound{
+    padding-top: 40px;
+    text-align: center;
+    align-items: center;
 }

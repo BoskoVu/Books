@@ -9,17 +9,16 @@ const BookComponent = ({ checked, setChecked }) => {
   const [book, setBook] = useState({})
   const [imgSrc, setImgSrc] = useState('')
   const [author, setAuthor] = useState({})
-  const exists = false
 
   useEffect(() => {
+    let exists = false
     axios.get(`https://openlibrary.org/works/${bookId}.json`)
       .then(res => {
         setBook(res.data)
         document.title = res.data.title;
         setImgSrc(`https://covers.openlibrary.org/b/id/${res.data.covers[0]}-L.jpg`)
-
         if (checked.length > 0) {
-          checked.map(
+          checked.forEach(
             check => {
               if (check.key === res.data.key) {
                 exists = true;
@@ -48,7 +47,7 @@ const BookComponent = ({ checked, setChecked }) => {
   return (
     <div className='books'>
       <div className='buttonDiv'>
-        <button className='btnHome' onClick={() => { navigate(-1) }}><i class="fa fa-home">     Back</i></button>
+        <button className='btnHome' onClick={() => { navigate('/') }}><i className="fa fa-home">     Home</i></button>
       </div>
       <div className='imgDiv'>
         <img src={imgSrc} alt=''></img>

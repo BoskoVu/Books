@@ -1,9 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const PageNotFound = () => {
+  const navigate = useNavigate()
+
   return (
-    <div>
-      Pogresan URL
+    <div className='pageNotFound'>
+      <h3>Wrong URL</h3>
+        <button className='btnHome' onClick={() => { navigate('/') }}><i className="fa fa-home">     Home</i></button>
     </div>
   );
 }
